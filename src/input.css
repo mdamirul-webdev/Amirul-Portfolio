@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* Container configuration */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+@layer base {
+ 
+  :root { 
+    @apply box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); }
+  
+  html, body {
+    @apply bg-[#07b0e0];
+  }
+
+  body {
+    @apply font-family: 'Poppins', system-ui, sans-serif; min-height: 100vh;
+  }
+
+  .dots {
+    @apply background-image: radial-gradient(#fff 2px, transparent 2.5px); background-size: 24px 24px;
+  }
+  
+  .tab[aria-selected="true"] {
+    @apply color: #fff; font-weight: 600;
+  }
+  
+  .item[hidden] { display: none; }
+  : focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+}
+
+
+@theme {
+
+  --font-poppins: "Poppins", sans-serif;
+
+
+
+  --breakpoint-*: initial;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+}
